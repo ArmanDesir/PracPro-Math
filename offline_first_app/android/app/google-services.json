@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "985290804912",
+    "project_id": "pracpro-f7488",
+    "storage_bucket": "pracpro-f7488.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:985290804912:android:f9b5322a9a7f30cdff3575",
+        "android_client_info": {
+          "package_name": "com.example.offline_first_app"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBQKpIpj-EgXvp-MiRAfgC4wpl4Wfnmz44"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
