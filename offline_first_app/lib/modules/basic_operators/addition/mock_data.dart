@@ -14,6 +14,46 @@ final List<Map<String, dynamic>> additionLessons = [
         'options': ['2', '3', '4'],
         'a': 2,
       },
+      {
+        'q': 'What is 3 + 1?',
+        'options': ['2', '3', '4'],
+        'a': 2,
+      },
+      {
+        'q': 'What is 4 + 0?',
+        'options': ['4', '0', '5'],
+        'a': 0,
+      },
+      {
+        'q': 'What is 2 + 3?',
+        'options': ['4', '5', '6'],
+        'a': 1,
+      },
+      {
+        'q': 'What is 5 + 1?',
+        'options': ['5', '6', '7'],
+        'a': 1,
+      },
+      {
+        'q': 'What is 0 + 6?',
+        'options': ['6', '0', '7'],
+        'a': 0,
+      },
+      {
+        'q': 'What is 3 + 2?',
+        'options': ['4', '5', '6'],
+        'a': 1,
+      },
+      {
+        'q': 'What is 4 + 3?',
+        'options': ['6', '7', '8'],
+        'a': 1,
+      },
+      {
+        'q': 'What is 5 + 4?',
+        'options': ['8', '9', '10'],
+        'a': 1,
+      },
     ],
     'games': ['Crossword', 'Ninja Math'],
   },

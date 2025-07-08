@@ -4,14 +4,12 @@ import '../database/database_helper.dart';
 import '../services/firebase_service.dart';
 import '../models/user.dart';
 import '../models/task.dart';
-import '../models/classroom.dart';
-import '../services/classroom_service.dart';
+
 import 'package:logger/logger.dart';
 
 class SyncService {
   final DatabaseHelper _databaseHelper = DatabaseHelper();
   final FirebaseService _firebaseService = FirebaseService();
-  final ClassroomService _classroomService = ClassroomService();
   final Connectivity _connectivity = Connectivity();
 
   StreamSubscription<List<ConnectivityResult>>? _connectivitySubscription;

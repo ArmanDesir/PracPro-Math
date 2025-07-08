@@ -1,7 +1,27 @@
 import 'package:flutter/material.dart';
+import 'crossword_math_game.dart';
+import 'ninja_math_game.dart';
 
 class GameScreen extends StatelessWidget {
   const GameScreen({Key? key}) : super(key: key);
+
+  void _startGame(BuildContext context, String game, String difficulty) {
+    if (game == 'Crossword Math') {
+      Navigator.push(
+        context,
+        MaterialPageRoute(
+          builder: (_) => CrosswordMathGameScreen(difficulty: difficulty),
+        ),
+      );
+    } else if (game == 'Ninja Math') {
+      Navigator.push(
+        context,
+        MaterialPageRoute(
+          builder: (_) => NinjaMathGameScreen(difficulty: difficulty),
+        ),
+      );
+    }
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -18,23 +38,16 @@ class GameScreen extends StatelessWidget {
             _GameCard(
               title: 'Crossword Math',
               icon: Icons.grid_on,
-              onSelect: (difficulty) {
-                // TODO: Navigate to Crossword game with difficulty
-                ScaffoldMessenger.of(context).showSnackBar(
-                  SnackBar(content: Text('Crossword Math - $difficulty')),
-                );
-              },
+              onSelect:
+                  (difficulty) =>
+                      _startGame(context, 'Crossword Math', difficulty),
             ),
             const SizedBox(height: 24),
             _GameCard(
               title: 'Ninja Math',
               icon: Icons.sports_martial_arts,
-              onSelect: (difficulty) {
-                // TODO: Navigate to Ninja Math game with difficulty
-                ScaffoldMessenger.of(context).showSnackBar(
-                  SnackBar(content: Text('Ninja Math - $difficulty')),
-                );
-              },
+              onSelect:
+                  (difficulty) => _startGame(context, 'Ninja Math', difficulty),
             ),
           ],
         ),

@@ -10,9 +10,10 @@ import 'screens/home_screen.dart';
 import 'screens/login_screen.dart';
 import 'screens/profile_screen.dart';
 import 'modules/basic_operators/addition/addition_screen.dart';
-import 'modules/basic_operators/addition/lesson_detail_screen.dart';
+import 'modules/basic_operators/addition/lesson_list_screen.dart';
 import 'modules/basic_operators/addition/quiz_screen.dart';
 import 'modules/basic_operators/addition/game_screen.dart';
+import 'modules/basic_operators/addition/mock_data.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -46,14 +47,12 @@ class MyApp extends StatelessWidget {
           '/home': (context) => const HomeScreen(),
           '/profile': (context) => const ProfileScreen(),
           '/addition': (context) => const AdditionScreen(),
-          '/addition/lessons':
-              (context) => const LessonDetailScreen(
-                lessonTitle: 'Lesson 1: Intro to Addition',
-                explanation:
-                    'Addition means putting things together. 2 + 3 = 5!',
-                videoUrl: 'https://www.youtube.com/watch?v=1W5aYi3lkho',
+          '/addition/lessons': (context) => const LessonListScreen(),
+          '/addition/quiz':
+              (context) => QuizScreen(
+                questions:
+                    additionLessons[0]['quiz'].cast<Map<String, dynamic>>(),
               ),
-          '/addition/quiz': (context) => const QuizScreen(),
           '/addition/games': (context) => const GameScreen(),
         },
       ),
